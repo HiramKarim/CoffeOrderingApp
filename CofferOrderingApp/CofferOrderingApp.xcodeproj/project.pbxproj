@@ -14,8 +14,10 @@
 		1F6061A12536C0780007419B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F60619F2536C0780007419B /* LaunchScreen.storyboard */; };
 		1F6061AC2536C0780007419B /* CofferOrderingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6061AB2536C0780007419B /* CofferOrderingAppTests.swift */; };
 		1F6061B72536C0780007419B /* CofferOrderingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6061B62536C0780007419B /* CofferOrderingAppUITests.swift */; };
-		1F86FB4F253C04C800BE747D /* OrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86FB4E253C04C800BE747D /* OrdersVC.swift */; };
 		1F86FB54253C052D00BE747D /* AddOrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86FB53253C052D00BE747D /* AddOrdersVC.swift */; };
+		1F86FB59253C062800BE747D /* OrdersListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86FB58253C062800BE747D /* OrdersListTVC.swift */; };
+		1F86FB69253C2F3B00BE747D /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86FB68253C2F3B00BE747D /* JSONParser.swift */; };
+		1F86FB6E253C2F6C00BE747D /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86FB6D253C2F6C00BE747D /* ServiceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +51,10 @@
 		1F6061B22536C0780007419B /* CofferOrderingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CofferOrderingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6061B62536C0780007419B /* CofferOrderingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CofferOrderingAppUITests.swift; sourceTree = "<group>"; };
 		1F6061B82536C0780007419B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1F86FB4E253C04C800BE747D /* OrdersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersVC.swift; sourceTree = "<group>"; };
 		1F86FB53253C052D00BE747D /* AddOrdersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrdersVC.swift; sourceTree = "<group>"; };
+		1F86FB58253C062800BE747D /* OrdersListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListTVC.swift; sourceTree = "<group>"; };
+		1F86FB68253C2F3B00BE747D /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		1F86FB6D253C2F6C00BE747D /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +141,8 @@
 		1F86FB43253C02F100BE747D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1F86FB4E253C04C800BE747D /* OrdersVC.swift */,
 				1F86FB53253C052D00BE747D /* AddOrdersVC.swift */,
+				1F86FB58253C062800BE747D /* OrdersListTVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -160,6 +164,7 @@
 		1F86FB46253C030B00BE747D /* API */ = {
 			isa = PBXGroup;
 			children = (
+				1F86FB6D253C2F6C00BE747D /* ServiceManager.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 		1F86FB47253C031100BE747D /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				1F86FB68253C2F3B00BE747D /* JSONParser.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -302,9 +308,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F6061952536C0750007419B /* AppDelegate.swift in Sources */,
+				1F86FB69253C2F3B00BE747D /* JSONParser.swift in Sources */,
 				1F86FB54253C052D00BE747D /* AddOrdersVC.swift in Sources */,
-				1F86FB4F253C04C800BE747D /* OrdersVC.swift in Sources */,
+				1F86FB59253C062800BE747D /* OrdersListTVC.swift in Sources */,
 				1F6061972536C0750007419B /* SceneDelegate.swift in Sources */,
+				1F86FB6E253C2F6C00BE747D /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
