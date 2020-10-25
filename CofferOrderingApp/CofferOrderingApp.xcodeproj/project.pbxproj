@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F0848812545301300F3B028 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0848802545301300F3B028 /* OrderCell.swift */; };
 		1F0848862545378D00F3B028 /* AddCoffeeOrderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0848852545378D00F3B028 /* AddCoffeeOrderVM.swift */; };
+		1F08488B25454B6100F3B028 /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F08488A25454B6100F3B028 /* KeyboardHelper.swift */; };
 		1F6061952536C0750007419B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6061942536C0750007419B /* AppDelegate.swift */; };
 		1F6061972536C0750007419B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6061962536C0750007419B /* SceneDelegate.swift */; };
 		1F60619C2536C0750007419B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F60619A2536C0750007419B /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		1F0848802545301300F3B028 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		1F0848852545378D00F3B028 /* AddCoffeeOrderVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeeOrderVM.swift; sourceTree = "<group>"; };
+		1F08488A25454B6100F3B028 /* KeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHelper.swift; sourceTree = "<group>"; };
 		1F6061912536C0750007419B /* CofferOrderingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CofferOrderingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6061942536C0750007419B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F6061962536C0750007419B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				1F86FB68253C2F3B00BE747D /* JSONParser.swift */,
+				1F08488A25454B6100F3B028 /* KeyboardHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F08488B25454B6100F3B028 /* KeyboardHelper.swift in Sources */,
 				1F6061952536C0750007419B /* AppDelegate.swift in Sources */,
 				1F9B26A82544FF7600A8F89E /* OrderVM.swift in Sources */,
 				1F0848812545301300F3B028 /* OrderCell.swift in Sources */,
