@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8Ou-yD-FzO">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -38,12 +38,12 @@
                                     <segment title="Large"/>
                                 </segments>
                             </segmentedControl>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b6S-RM-qGF">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b6S-RM-qGF">
                                 <rect key="frame" x="103.66666666666669" y="510" width="207" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qhB-Dp-VrU">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qhB-Dp-VrU">
                                 <rect key="frame" x="104" y="564" width="206" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -69,9 +69,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Orders" id="lE2-yJ-exW">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="5IR-tu-Qod"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="5IR-tu-Qod">
+                            <connections>
+                                <action selector="SaveButtonPressed:" destination="8wu-ys-5Ce" id="b0z-Vd-Sw4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="CoffeeSizeSegmentedControl" destination="QQe-Yz-Vrv" id="nEO-ce-RNt"/>
+                        <outlet property="EmailTextfield" destination="qhB-Dp-VrU" id="blE-Lx-hrr"/>
+                        <outlet property="NameTextfield" destination="b6S-RM-qGF" id="oeG-T4-PqQ"/>
                         <outlet property="ordersListTable" destination="thf-f9-ytI" id="dVq-Dg-jY5"/>
                     </connections>
                 </viewController>

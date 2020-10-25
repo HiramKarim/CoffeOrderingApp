@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0848812545301300F3B028 /* OrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0848802545301300F3B028 /* OrderCell.swift */; };
+		1F0848862545378D00F3B028 /* AddCoffeeOrderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0848852545378D00F3B028 /* AddCoffeeOrderVM.swift */; };
 		1F6061952536C0750007419B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6061942536C0750007419B /* AppDelegate.swift */; };
 		1F6061972536C0750007419B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6061962536C0750007419B /* SceneDelegate.swift */; };
 		1F60619C2536C0750007419B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F60619A2536C0750007419B /* Main.storyboard */; };
@@ -18,6 +20,9 @@
 		1F86FB59253C062800BE747D /* OrdersListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86FB58253C062800BE747D /* OrdersListTVC.swift */; };
 		1F86FB69253C2F3B00BE747D /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86FB68253C2F3B00BE747D /* JSONParser.swift */; };
 		1F86FB6E253C2F6C00BE747D /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86FB6D253C2F6C00BE747D /* ServiceManager.swift */; };
+		1F9B269E2544E60E00A8F89E /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B269D2544E60E00A8F89E /* Order.swift */; };
+		1F9B26A32544F34800A8F89E /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B26A22544F34800A8F89E /* WebService.swift */; };
+		1F9B26A82544FF7600A8F89E /* OrderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B26A72544FF7600A8F89E /* OrderVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F0848802545301300F3B028 /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
+		1F0848852545378D00F3B028 /* AddCoffeeOrderVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCoffeeOrderVM.swift; sourceTree = "<group>"; };
 		1F6061912536C0750007419B /* CofferOrderingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CofferOrderingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6061942536C0750007419B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F6061962536C0750007419B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +62,9 @@
 		1F86FB58253C062800BE747D /* OrdersListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListTVC.swift; sourceTree = "<group>"; };
 		1F86FB68253C2F3B00BE747D /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		1F86FB6D253C2F6C00BE747D /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		1F9B269D2544E60E00A8F89E /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		1F9B26A22544F34800A8F89E /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		1F9B26A72544FF7600A8F89E /* OrderVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +92,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F08487E25452FE400F3B028 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1F08487F25452FED00F3B028 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1F08487F25452FED00F3B028 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1F0848802545301300F3B028 /* OrderCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		1F6061882536C0750007419B = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +131,7 @@
 		1F6061932536C0750007419B /* CofferOrderingApp */ = {
 			isa = PBXGroup;
 			children = (
+				1F08487E25452FE400F3B028 /* Views */,
 				1F86FB47253C031100BE747D /* Helper */,
 				1F86FB46253C030B00BE747D /* API */,
 				1F86FB45253C030200BE747D /* Models */,
@@ -150,6 +177,8 @@
 		1F86FB44253C02FB00BE747D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				1F9B26A72544FF7600A8F89E /* OrderVM.swift */,
+				1F0848852545378D00F3B028 /* AddCoffeeOrderVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -157,6 +186,7 @@
 		1F86FB45253C030200BE747D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1F9B269D2544E60E00A8F89E /* Order.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				1F86FB6D253C2F6C00BE747D /* ServiceManager.swift */,
+				1F9B26A22544F34800A8F89E /* WebService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -308,11 +339,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F6061952536C0750007419B /* AppDelegate.swift in Sources */,
+				1F9B26A82544FF7600A8F89E /* OrderVM.swift in Sources */,
+				1F0848812545301300F3B028 /* OrderCell.swift in Sources */,
 				1F86FB69253C2F3B00BE747D /* JSONParser.swift in Sources */,
+				1F9B26A32544F34800A8F89E /* WebService.swift in Sources */,
 				1F86FB54253C052D00BE747D /* AddOrdersVC.swift in Sources */,
 				1F86FB59253C062800BE747D /* OrdersListTVC.swift in Sources */,
 				1F6061972536C0750007419B /* SceneDelegate.swift in Sources */,
 				1F86FB6E253C2F6C00BE747D /* ServiceManager.swift in Sources */,
+				1F0848862545378D00F3B028 /* AddCoffeeOrderVM.swift in Sources */,
+				1F9B269E2544E60E00A8F89E /* Order.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

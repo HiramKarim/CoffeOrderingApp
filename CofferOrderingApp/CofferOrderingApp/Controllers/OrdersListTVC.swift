@@ -8,11 +8,66 @@
 import UIKit
 
 class OrdersListTVC: UITableViewController {
+    
+    private let coffeeOrdersURL = "https://guarded-retreat-82533.herokuapp.com/orders"
+    private var orderListVM = OrderListVM()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.register(OrderCell.self, forCellReuseIdentifier: "orderCell")
+        self.tableView.rowHeight = 80
+        self.tableView.estimatedRowHeight = 90
+        self.tableView.estimatedRowHeight = UITableView.automaticDimension
         
+        populateOrders()
+    }
+    
+    private func fetchData() {
+        ServiceManager.shared().downloadDataList(of: Order.self,
+                                                 from: URL.init(string: coffeeOrdersURL)!)
+        { [weak self] (result) in
+            
+            guard let self = self else { return }
+            
+            switch result {
+            case .failure(let error):
+                print("DEBUG error \(error)")
+                break
+            case .success(let orders):
+                self.bindVM(with: orders)
+                break
+            }
+        }
+    }
+    
+    private func populateOrders() {
+        
+        guard let coffeeOrdersURL = URL(string: coffeeOrdersURL) else {
+            return
+        }
+        
+        let resource = Resource<[Order]>(url: coffeeOrdersURL)
+        
+        WebService.shared().load(resource: resource) { [weak self] (result) in
+            guard let self = self else { return }
+            
+            switch result {
+            case .failure(let error):
+                print("DEBUG error \(error)")
+                break
+            case .success(let orders):
+                self.bindVM(with: orders)
+                break
+            }
+        }
+        
+    }
+    
+    private func bindVM(with orders:[Order]) {
+        self.orderListVM.ordersVM = orders.map(OrderVM.init)
+        print("DEBUG \(self.orderListVM.ordersVM)")
+        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -24,14 +79,18 @@ class OrdersListTVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return self.orderListVM.ordersVM.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderCell", for: indexPath) as? OrderCell else {
+            return UITableViewCell()
+        }
 
-        let cell = UITableViewCell()
-        //cell.backgroundColor = .red
+        let vm = self.orderListVM.orderViewModel(at: indexPath.row)
+        
+        cell.titleLabel.text = vm.type
+        cell.descriptionLabel.text = vm.size
         return cell
     }
 
