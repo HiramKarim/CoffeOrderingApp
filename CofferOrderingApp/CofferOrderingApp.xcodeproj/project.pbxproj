@@ -17,10 +17,10 @@
 		1F6061A12536C0780007419B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F60619F2536C0780007419B /* LaunchScreen.storyboard */; };
 		1F6061AC2536C0780007419B /* CofferOrderingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6061AB2536C0780007419B /* CofferOrderingAppTests.swift */; };
 		1F6061B72536C0780007419B /* CofferOrderingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6061B62536C0780007419B /* CofferOrderingAppUITests.swift */; };
+		1F668EAE2547E47700E52A48 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F668EAD2547E47700E52A48 /* API.swift */; };
 		1F86FB54253C052D00BE747D /* AddOrdersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86FB53253C052D00BE747D /* AddOrdersVC.swift */; };
 		1F86FB59253C062800BE747D /* OrdersListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86FB58253C062800BE747D /* OrdersListTVC.swift */; };
 		1F86FB69253C2F3B00BE747D /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86FB68253C2F3B00BE747D /* JSONParser.swift */; };
-		1F86FB6E253C2F6C00BE747D /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F86FB6D253C2F6C00BE747D /* ServiceManager.swift */; };
 		1F9B269E2544E60E00A8F89E /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B269D2544E60E00A8F89E /* Order.swift */; };
 		1F9B26A32544F34800A8F89E /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B26A22544F34800A8F89E /* WebService.swift */; };
 		1F9B26A82544FF7600A8F89E /* OrderVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9B26A72544FF7600A8F89E /* OrderVM.swift */; };
@@ -60,10 +60,10 @@
 		1F6061B22536C0780007419B /* CofferOrderingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CofferOrderingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6061B62536C0780007419B /* CofferOrderingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CofferOrderingAppUITests.swift; sourceTree = "<group>"; };
 		1F6061B82536C0780007419B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F668EAD2547E47700E52A48 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		1F86FB53253C052D00BE747D /* AddOrdersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrdersVC.swift; sourceTree = "<group>"; };
 		1F86FB58253C062800BE747D /* OrdersListTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListTVC.swift; sourceTree = "<group>"; };
 		1F86FB68253C2F3B00BE747D /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
-		1F86FB6D253C2F6C00BE747D /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		1F9B269D2544E60E00A8F89E /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		1F9B26A22544F34800A8F89E /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		1F9B26A72544FF7600A8F89E /* OrderVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderVM.swift; sourceTree = "<group>"; };
@@ -196,7 +196,6 @@
 		1F86FB46253C030B00BE747D /* API */ = {
 			isa = PBXGroup;
 			children = (
-				1F86FB6D253C2F6C00BE747D /* ServiceManager.swift */,
 				1F9B26A22544F34800A8F89E /* WebService.swift */,
 			);
 			path = API;
@@ -207,6 +206,7 @@
 			children = (
 				1F86FB68253C2F3B00BE747D /* JSONParser.swift */,
 				1F08488A25454B6100F3B028 /* KeyboardHelper.swift */,
+				1F668EAD2547E47700E52A48 /* API.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -349,8 +349,8 @@
 				1F9B26A32544F34800A8F89E /* WebService.swift in Sources */,
 				1F86FB54253C052D00BE747D /* AddOrdersVC.swift in Sources */,
 				1F86FB59253C062800BE747D /* OrdersListTVC.swift in Sources */,
+				1F668EAE2547E47700E52A48 /* API.swift in Sources */,
 				1F6061972536C0750007419B /* SceneDelegate.swift in Sources */,
-				1F86FB6E253C2F6C00BE747D /* ServiceManager.swift in Sources */,
 				1F0848862545378D00F3B028 /* AddCoffeeOrderVM.swift in Sources */,
 				1F9B269E2544E60E00A8F89E /* Order.swift in Sources */,
 			);

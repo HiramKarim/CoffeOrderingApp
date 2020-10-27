@@ -25,6 +25,7 @@ final class KeyboardHelper {
     }
     
     deinit {
+        print("DEBUG removing keyboard observer")
         NotificationCenter.default.removeObserver(self)
     }
     

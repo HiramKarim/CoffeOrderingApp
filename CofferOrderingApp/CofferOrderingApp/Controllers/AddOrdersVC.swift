@@ -31,11 +31,10 @@ class AddOrdersVC: UIViewController {
         populateSegmentedControl()
         setupPrivateKeyboardHelper()
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTouchOnView))
-        tapGesture.numberOfTapsRequired = 1
-        self.view.addGestureRecognizer(tapGesture)
-        
-        self.view.isUserInteractionEnabled = true
+        //let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTouchOnView))
+        //tapGesture.numberOfTapsRequired = 1
+        //self.view.addGestureRecognizer(tapGesture)
+        //self.view.isUserInteractionEnabled = true
     }
     
     private func populateSegmentedControl() {
@@ -77,10 +76,26 @@ class AddOrdersVC: UIViewController {
     
     @IBAction func SaveButtonPressed(_ sender: Any) {
         
-        let customerName = NameTextfield.text
-        let customerEmail = EmailTextfield.text
+        let customerName = NameTextfield.text ?? ""
+        let customerEmail = EmailTextfield.text ?? ""
         let selectedSize = addCoffeeOrderVM.sizes[CoffeeSizeSegmentedControl.selectedSegmentIndex]
-        let selectedCoffeeType = addCoffeeOrderVM.tyes[0]
+        
+        guard let indexPath = ordersListTable.indexPathForSelectedRow else { return }
+        
+        let selectedCoffeeType = addCoffeeOrderVM.tyes[indexPath.row]
+        
+        addCoffeeOrderVM.setUserInfo(userName: customerName, userEmail: customerEmail, coffeeSize: selectedSize, coffeeType: selectedCoffeeType)
+        
+        WebService.shared().load(resource: Order.create(vm: addCoffeeOrderVM)) { (result) in
+            switch result {
+            case .success(let order):
+                print("order created: \(order)")
+                break
+            case .failure(let error):
+                print("Error: \(error)")
+                break
+            }
+        }
         
     }
     

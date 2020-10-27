@@ -9,7 +9,6 @@ import UIKit
 
 class OrdersListTVC: UITableViewController {
     
-    private let coffeeOrdersURL = "https://guarded-retreat-82533.herokuapp.com/orders"
     private var orderListVM = OrderListVM()
 
     override func viewDidLoad() {
@@ -23,33 +22,8 @@ class OrdersListTVC: UITableViewController {
         populateOrders()
     }
     
-    private func fetchData() {
-        ServiceManager.shared().downloadDataList(of: Order.self,
-                                                 from: URL.init(string: coffeeOrdersURL)!)
-        { [weak self] (result) in
-            
-            guard let self = self else { return }
-            
-            switch result {
-            case .failure(let error):
-                print("DEBUG error \(error)")
-                break
-            case .success(let orders):
-                self.bindVM(with: orders)
-                break
-            }
-        }
-    }
-    
     private func populateOrders() {
-        
-        guard let coffeeOrdersURL = URL(string: coffeeOrdersURL) else {
-            return
-        }
-        
-        let resource = Resource<[Order]>(url: coffeeOrdersURL)
-        
-        WebService.shared().load(resource: resource) { [weak self] (result) in
+        WebService.shared().load(resource: Order.all) { [weak self] (result) in
             guard let self = self else { return }
             
             switch result {
@@ -61,7 +35,6 @@ class OrdersListTVC: UITableViewController {
                 break
             }
         }
-        
     }
     
     private func bindVM(with orders:[Order]) {
