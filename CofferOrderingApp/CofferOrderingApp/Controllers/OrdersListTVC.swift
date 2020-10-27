@@ -11,6 +11,13 @@ class OrdersListTVC: UITableViewController {
     
     private var orderListVM = OrderListVM()
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        populateOrders()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,8 +25,6 @@ class OrdersListTVC: UITableViewController {
         self.tableView.rowHeight = 80
         self.tableView.estimatedRowHeight = 90
         self.tableView.estimatedRowHeight = UITableView.automaticDimension
-        
-        populateOrders()
     }
     
     private func populateOrders() {
