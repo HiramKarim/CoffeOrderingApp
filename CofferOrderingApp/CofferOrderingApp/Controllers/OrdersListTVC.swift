@@ -23,7 +23,6 @@ class OrdersListTVC: UITableViewController {
         
         self.tableView.register(OrderCell.self, forCellReuseIdentifier: "orderCell")
         self.tableView.rowHeight = 80
-        self.tableView.estimatedRowHeight = 90
         self.tableView.estimatedRowHeight = UITableView.automaticDimension
     }
     

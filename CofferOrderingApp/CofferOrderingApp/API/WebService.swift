@@ -31,6 +31,8 @@ struct Resource<T: Codable> {
 
 class WebService {
     
+    private init() {}
+    
     static let shared = {
         return WebService()
     }

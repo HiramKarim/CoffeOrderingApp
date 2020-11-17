@@ -196,6 +196,7 @@
 		1F86FB46253C030B00BE747D /* API */ = {
 			isa = PBXGroup;
 			children = (
+				1F668EAD2547E47700E52A48 /* API.swift */,
 				1F9B26A22544F34800A8F89E /* WebService.swift */,
 			);
 			path = API;
@@ -206,7 +207,6 @@
 			children = (
 				1F86FB68253C2F3B00BE747D /* JSONParser.swift */,
 				1F08488A25454B6100F3B028 /* KeyboardHelper.swift */,
-				1F668EAD2547E47700E52A48 /* API.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
